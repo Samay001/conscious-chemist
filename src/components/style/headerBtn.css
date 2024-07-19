@@ -1,0 +1,13 @@
+.header-btn-container {
+    display: flex;
+}
+
+.header-btn {
+    background-color: #FFDF00;
+    padding: 10px 20px; /* Adjust padding for better round shape */
+    font-size: 1rem;
+    cursor: pointer;
+    border: none; /* Remove default border */
+    border-radius: 20px; /* Make it round by setting border-radius */
+    outline: none; /* Remove outline when focused */
+}
