@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <Layout>
       <div className="home">
-        <img src={main} alt="main" className="main" />
+        <img alt="main" className="main responsive-image" />
       </div>
       <div className='moving-band'>
         <Band />

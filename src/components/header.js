@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className="sections">
           <a href="#" className="navbar-link">
             Home
-          </a>
+          </a>  
           <a href="#" className="navbar-link">
             About us
           </a>
