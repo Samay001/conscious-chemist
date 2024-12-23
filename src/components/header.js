@@ -71,14 +71,32 @@ const Navbar = () => {
         </div>
       </nav>
       <div className={`navbar-sections ${isOpen ? "open" : ""}`}>
-        <NavLink to="/blog" className="navbar-link">
+        <a to="#" className="navbar-link">
+          Home
+        </a>
+        <a to="#" className="navbar-link">
+          About us
+        </a>
+        <a to="#" className="navbar-link">
           Blog
-        </NavLink>
-        <NavLink to="/feed" className="navbar-link">
-          Feed
-        </NavLink>
-        <a href="#section3" className="navbar-link">
-          Username
+        </a>
+        <a to="#" className="navbar-link">
+          Shop all
+        </a>
+        <a to="#" className="navbar-link">
+          Ingredients
+        </a>
+        <a to="#" className="navbar-link">
+          Concerns
+        </a>
+        <a to="#" className="navbar-link">
+          categories
+        </a>
+        <a to="#" className="navbar-link">
+          Skin type
+        </a>
+        <a to="#" className="navbar-link">
+          Store Locator
         </a>
       </div>
     </div>

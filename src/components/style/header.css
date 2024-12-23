@@ -1,132 +1,154 @@
-*{
-  margin:0;
-  padding:0;
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1800px;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  color: #000000;
+  overflow: hidden;
+}
+
+.header-banner {
+  background-color: #104D91;
+  width: 100%;
+  color: #ffffff;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.navbar-brand img {
+  width: 150px;
+  height: 50px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-link i {
+  color: #000000;
+}
+
+.sections {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-sections {
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: max-height 0.5s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.navbar-sections.open {
+  max-height: 500px; /* Optional: Use dynamic height for scalability */
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar-link {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000000;
+  margin: 4px 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color:#ffffff;
-    color: #000000;
-    overflow: hidden;
-    
-  }
-  .container{
-    overflow: hidden;
   }
 
-  .header-banner{
-    background-color: #104D91;
-    color: #ffffff;
-    padding: 0.5rem 0;
-    text-align: center;
-  }
-  .navbar-brand {
-    max-width: 1200px;
-    font-size: 1rem;
-    font-weight: bold;
-    
-  }
-  .navbar-brand img{
-    width: 150px;
-    height: 50px;
-  }
-  .nav-link{
-    text-decoration: none;
-    color: inherit;
-    
-  }
-  
-  .nav-link i{
-    color: #000000;
-  }
-  .sections {
+  .navbar-sections {
     display: flex;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 0;
   }
-  
+
+  .navbar-link {
+    margin-bottom: 1rem;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .navbar-brand {
+    margin-bottom: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .sections {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
   .navbar-sections {
     display: none;
   }
-  
+
   .navbar-link {
-    color: #000000;
-    text-decoration: none;
-    font-size: 1rem;
+    margin-bottom: 0;
   }
-  
-  .navbar-link:hover {
-    text-decoration: underline;
-  }
-  
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  
-  .hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #000000;
-    margin: 3px 0;
-    transition: 0.4s;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: row;
-      align-items: center;
-    }
-  
-    .navbar-sections {
-      flex-direction: column;
-      align-items: center;
-      width: 85%;
-      display: none;
-      background-color: #fff;
-      padding: 1rem 2rem;
-      position: absolute;
-      top: 90px; 
-      left: 0;
-      right: 0;
-    }
-  
-    .navbar-sections.open {
-      display: flex;
-    }
-  
-    .navbar-link {
-      margin-bottom: 0.5rem;
-    }
-  
-    .navbar-brand {
-      margin-bottom: 0;
-    }
-  
-    .hamburger {
-      display: flex;
-    }
-  
-    .sections {
-      display: none;
-    }
-  }
-  
-  @media (min-width: 769px) {
-    .navbar-sections {
-      display: none;
-    }
-  
-    .navbar-link {
-      margin-bottom: 0;
-    }
-  }
-  
+}

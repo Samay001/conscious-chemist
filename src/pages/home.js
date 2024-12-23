@@ -1,7 +1,7 @@
 import React from 'react';
 import './style/home.css';
 import Layout from '../components/layout';
-import main from '../assets/images/main.webp';
+// import main from '../assets/images/main.webp';
 import Catorgorie from '../components/categorieButton';
 import Sunscreen from './sunscreen';
 import Band from '../components/yellowBand';
