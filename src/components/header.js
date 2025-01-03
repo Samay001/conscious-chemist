@@ -72,7 +72,7 @@ const Navbar = () => {
       </nav>
       <div className={`navbar-sections ${isOpen ? "open" : ""}`}>
         <a to="#" className="navbar-link">
-          Home
+          h
         </a>
         <a to="#" className="navbar-link">
           About us
